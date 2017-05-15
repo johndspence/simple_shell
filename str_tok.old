@@ -1,0 +1,90 @@
+#include "shell_hdr.h"
+
+int count_tokens(char* line)
+{
+    int tok_cnt;
+    unsigned int i;
+
+    tok_cnt = 0;
+    for (i = 0; i < strlen(line); i++)
+    {
+        if(line[i] == ' ')
+        {
+            tok_cnt++;
+        }
+    }
+    printf("count tokens ran %d\n", (tok_cnt + 1));
+    return(tok_cnt + 1);
+}
+int count_chars(char* line, char space)
+{
+    int i;
+
+    i = 0;
+    while (*line != ' ' && *line != space && *line != 10)
+    {
+        line++;
+        i++;
+    }
+    printf("count chars ran %d\n", i);
+    return i;
+}
+
+char** str_tok(char* line)
+{
+    char* token;
+    char** tokens;
+    int tok_ttl;
+    int char_iter;
+    int token_iter;
+    int tokens_iter;
+
+    tok_ttl = count_tokens(line);
+    printf("from str_tok tok_ttl = %d\n", tok_ttl);
+    tokens = malloc(sizeof(char *) * (tok_ttl + 1));
+    if (tokens == NULL)
+    {
+        return NULL;
+    }
+
+    char_iter = 0;
+    tokens_iter = 0;
+
+    while (tokens_iter < tok_ttl)
+    {
+        if (line[char_iter] != ' ' && line[char_iter] != '\n' && line[char_iter] != 10)
+        {
+            tokens[tokens_iter] = malloc(sizeof(char) *
+                (count_chars(&(line[char_iter]), ' ') + 1));
+            if (tokens[tokens_iter] == NULL)
+            {
+                return NULL;
+            }
+        token = tokens[tokens_iter];
+
+        while(line[char_iter] != ' ' && line[char_iter] != '\n' && line[char_iter] != 10)
+        {
+            *token++ = line[char_iter];
+            printf("line[char_iter] is %d\n", line[char_iter]);
+            char_iter++;
+        }
+        printf("here is a token before adding \\0 %s\n", token);
+        *token = '\0';
+        printf("here is a token after adding \\0 %s\n", token);
+        while(line[char_iter] == ' ' && line[char_iter] != '\n' && line[char_iter] != 10)
+        {
+            printf("here is checkpoint a\n");
+            char_iter++;
+        }
+        token_iter++;
+        printf("here is checkpoint b\n");
+        }
+        else
+        {
+            char_iter++;
+            printf("here is checkpoint c\n");
+        }
+    }
+    tokens[token_iter] = NULL;
+    return tokens;
+}
