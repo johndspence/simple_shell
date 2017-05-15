@@ -1,6 +1,41 @@
 #include "shell_hdr.h"
 
-int count_tokens(char *line)
+char **str_tok(char *line)
+{
+	char **tokens;
+	char *token;
+	int i, len;
+
+	len = 0;
+	for (i = 0; line[i]; i++)
+	{
+		if (line[i] == ' ' || line[i] == '\n')
+		{
+			len++;
+		}
+	}
+	len++;
+
+	tokens = malloc(sizeof(char *) * len);
+	if (!tokens)
+	{
+		printf("Error: malloc - parse_line\n");
+		return (NULL);
+	}
+
+	token = strtok(line, "\n ");
+	for (i = 0; token; i++)
+	{
+		tokens[i] = token;
+		token = strtok(NULL, "\n ");
+	}
+	tokens[i] = NULL;
+
+	return (tokens);
+}
+
+
+/*int count_tokens(char *line)
 {
     int token_count;
 
@@ -53,8 +88,8 @@ char **str_tok(char *s)
         tokens[token][token_position] = '\0';
         str_position++;
         token++;
-        /*else w[i][j] = ' ';*/
+        else w[i][j] = ' ';
     }
     tokens[token] = NULL;
     return tokens;
-  }
+}*/
