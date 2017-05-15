@@ -27,7 +27,7 @@ char **str_tok(char *s)
     int str_position;
     int token;
     int token_position;
-    char **w;
+    char **tokens;
 
     str_position = 0;
     token = 0;
@@ -45,13 +45,15 @@ char **str_tok(char *s)
         ((s[str_position] >= 'a') && (s[str_position] <= 'z')) ||
         ((s[str_position] >= 'A') && (s[str_position] <= 'Z')))
         {
-            tokens[tokens][token_position] = s[str_position];
-            j++;
+            tokens[token][token_position] = s[str_position];
+            str_position++;
+            token_position++;
         }
-        tokens[i][j] = '\0';
-        i++;
+        tokens[token][token_position] = '\0';
+        str_position++;
+        token++;
         /*else w[i][j] = ' ';*/
     }
-    tokens[i] = NULL;
+    tokens[token] = NULL;
     return tokens;
   }
