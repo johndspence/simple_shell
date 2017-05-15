@@ -31,7 +31,7 @@ int main(__attribute__((unused)) int argc, __attribute__((unused)) char **argv, 
         printf ("main.c: you typed %s", line);
         tokens = str_tok(line);
         free (line);
-        for (i = 0; tokens[i] != '\0'; i++)
+        for (i = 0; tokens[i] != NULL; i++)
         {
             printf ("main.c: entering token loop\n");
             printf ("main.c: token[%d] is %s\n", i, tokens[i]);

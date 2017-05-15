@@ -1,41 +1,42 @@
 #include "shell_hdr.h"
 
-int str_len(char *s)
-    {
-    int i;
-    i = 0;
+int count_tokens(char *line)
+{
+    int token_count;
 
-    while (s[i] != '\0')
+    token_count = 0;
+    while (*line != '\0')
     {
-        while (((s[i] >= '0') && (s[i] <= '9')) || ((s[i] >= 'a') && (s[i] <= 'z')) || ((s[i] >= 'A') && (s[i] <= 'Z')))
+        while ((((*line >= '0') && (*line <= '9'))
+        || ((*line >= 'a') && (*line <= 'z'))
+        || ((*line >= 'A') && (*line <= 'Z')))
+        && (*line != '\0'))
         {
-            i++;
+            line++;
         }
-        while (s[i] == ' ')
+        while ((*line == ' ') && (*line != '\0'))
         {
-            ;
+            line++;
         }
-        i++;
+        token_count++;
     }
-    printf("string to wordd str_len =%d\n", i);
-    return (i);
+    printf("token_count = %d\n", token_count);
+    return (token_count);
 }
 
 char **str_tok(char *s)
 {
-    int len;
     int str_position;
     int token;
     int token_position;
+    int token_count;
     char **tokens;
 
     str_position = 0;
     token = 0;
     token_position = 0;
-    len = str_len(s);
-    tokens = malloc(len * sizeof(char));
-
-    printf("string length is %d\n", len);
+    token_count = count_tokens(s);
+    tokens = malloc(sizeof(char **) * (token_count + 1));
 
     while (s[str_position] != '\0')
     {
