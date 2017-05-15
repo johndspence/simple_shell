@@ -1,11 +1,14 @@
 #include "shell_hdr.h"
 
-int exec_bltins(char **tokens, char **env, int status, char *line)
+int exec_bltins(char **tokens, char **env, int status)
 {
-
+    if (tokens[0] == NULL)
+    {
+        return (1);
+    }
     if (strings_compare(tokens[0], "exit") == 0)
     {
-        return exit_shell(tokens, line);
+        return exit_shell(tokens);
     }
     else if (strings_compare(tokens[0], "env") == 0)
     {

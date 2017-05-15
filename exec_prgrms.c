@@ -33,10 +33,10 @@ int exec_programs(char **tokens)
     {
         printf("I am the father ! %d\n", pid);
 		wait(&status);
+        printf("My son process has terminated with the status:%d\n", status);
         free_string_array (tokens);
         free (env_var_val);
         free (full_comd_path);
-		printf("My son process has terminated with the status:%d\n", status);
     }
     return (0);
 }
