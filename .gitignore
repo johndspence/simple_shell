@@ -34,6 +34,7 @@
 
 # Development Docs
 ./scratchspace
+./trash
 
 # Editor artifacts
 *.~
