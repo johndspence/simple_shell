@@ -2,6 +2,8 @@
 
 int exec_bltins_prgrms(char **tokens, char **env, int status, char *line)
 {
+    char *int_to_str;
+
     if (tokens[0] == NULL)
     {
         free(tokens);
@@ -22,18 +24,23 @@ int exec_bltins_prgrms(char **tokens, char **env, int status, char *line)
     {
         free(tokens);
         free(line);
-        printf("%d\n", status);
+        int_to_str = integer_to_string(status);
+        _printf(int_to_str);
+        _printf("\n");
+        free(int_to_str);
     }
     else if (_strcmp(tokens[0], "$$") == 0)
     {
         free(tokens);
         free(line);
-        printf("%d\n", getpid());
+        int_to_str = integer_to_string(getpid());
+        _printf(int_to_str);
+        _printf("\n");
+        free(int_to_str);
     }
     else
     {
-        exec_prgrms(tokens);
+        exec_prgrms(tokens, line);
     }
-    free (line);
     return 1;
 }

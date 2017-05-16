@@ -35,7 +35,6 @@ int main(__attribute__((unused)) int argc, __attribute__((unused)) char **argv, 
 void sig_handle_ctl_c(int sign)
 {
         char prompt[] = ">>> ";
-
         signal(sign, SIG_IGN);
         write(1 , "\nPlease type 'exit' to quit.\n", 29);
         write(1, prompt, 4);

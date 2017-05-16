@@ -4,7 +4,7 @@ char **parse_path(char *string, char delim)
 {
     int token_count;
     int token_iter;
-    int i3;
+    int str_iter;
     char **tokens;
     char *token;
 
@@ -15,32 +15,32 @@ char **parse_path(char *string, char delim)
         return NULL;
     }
     token_iter = 0;
-    i3 = 0;
+    str_iter = 0;
     while(token_iter < token_count)
     {
-        if (string[i3] != delim && string[i3] != '\0')
+        if (string[str_iter] != delim && string[str_iter] != '\0')
         {
-            tokens[token_iter] = malloc(sizeof(char) * (count_chars(&(string[i3]), delim) + 1));
+            tokens[token_iter] = malloc(sizeof(char) * (count_chars(&(string[str_iter]), delim) + 1));
             if (tokens[token_iter] == NULL)
             {
                 return NULL;
             }
             token = tokens[token_iter];
-            while(string[i3] != delim && string[i3] != '\0')
+            while(string[str_iter] != delim && string[str_iter] != '\0')
             {
-                *token++ = string[i3];
-                i3++;
+                *token++ = string[str_iter];
+                str_iter++;
             }
             *token = '\0';
-            while(string[i3] == delim && string[i3] != '\0')
+            while(string[str_iter] == delim && string[str_iter] != '\0')
             {
-                i3++;
+                str_iter++;
             }
             token_iter++;
         }
         else
         {
-            i3++;
+            str_iter++;
         }
     }
     tokens[token_count] = NULL;
@@ -62,6 +62,7 @@ int count_chars(char *string, char delim)
 int count_words(char *string, char delim)
 {
     int token_count;
+
     token_count = 0;
     while(*string != '\0')
     {

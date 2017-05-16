@@ -20,7 +20,7 @@ int count_tokens(char* line);
 int exec_bltins_prgrms(char **tokens, char **env, int status, char *line);
 int exit_shell(char **tokens, char *line);
 int _env(char **env);
-int exec_prgrms(char **tokens);
+int exec_prgrms(char **tokens, char *line);
 int _strlen(char *string);
 int _strcmp(char *string_a, char *string_b);
 int _strncmp(const char *string_a, const char *string_b, size_t n);
@@ -31,8 +31,10 @@ void free_str_array(char **array);
 char **parse_path(char *line, char);
 int count_chars(char *s1, char seperator);
 int count_words(char *s, char seperator);
-
+void _printf(char *str);
 void sig_handle_ctl_c(int sign);
+int integer_length(int n);
+char *integer_to_string(int n);
 
 
 #endif

@@ -13,7 +13,7 @@ char *get_env_var_val(char *env_var)
     env_var_val = malloc(sizeof(char) * BUFFER);
     if (!env_var_val)
     {
-        printf("Error get_env_var_val->malloc\n");
+        _printf("Error get_env_var_val->malloc\n");
         free (env_var_val);
         return (NULL);
     }

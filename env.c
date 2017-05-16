@@ -7,7 +7,8 @@ int _env(char **env)
     i = 0;
     while (env[i] != '\0')
     {
-        printf("%s\n", env[i]);
+        _printf(env[i]);
+        _printf("\n");
         i++;
     }
     return(1);

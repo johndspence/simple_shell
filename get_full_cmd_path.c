@@ -9,10 +9,9 @@ char *get_full_comd_path(char **tokens, char *env_var_val)
     int i;
     int full_comd_path_len;
 
-    /*printf("get_full_comd_path: tokens[0] is %s\n", tokens[0]);*/
     if(stat(tokens[0], &buffer) == 0)
     {
-        printf ("get_full_comd_path: tokens[0] was found!\n");
+        _printf ("get_full_comd_path: tokens[0] was found!\n");
         return (tokens[0]);
     }
     else
@@ -26,7 +25,7 @@ char *get_full_comd_path(char **tokens, char *env_var_val)
             full_comd_path = malloc(sizeof(char) * full_comd_path_len);
             if (!full_comd_path)
         	{
-        		printf ("Error: get_full_comd_path->malloc\n");
+        		_printf ("Error: get_full_comd_path->malloc\n");
         		return (NULL);
         	}
             memset(full_comd_path, 0, full_comd_path_len);
@@ -45,6 +44,8 @@ char *get_full_comd_path(char **tokens, char *env_var_val)
         }
         free_str_array(env_var_paths);
     }
-    printf("-simple_shell: %s: command not found\n", tokens[0]);
+    _printf("-simple_shell: ");
+    _printf(tokens[0]);
+    _printf(": command not found\n");
     return(NULL);
 }

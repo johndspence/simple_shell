@@ -1,6 +1,6 @@
 #include "shell_hdr.h"
 
-int exec_prgrms(char **tokens)
+int exec_prgrms(char **tokens, char *line)
 {
     char *env_var;
     char *env_var_val;
@@ -14,9 +14,6 @@ int exec_prgrms(char **tokens)
 
     if (full_comd_path != NULL)
     {
-    /*printf("exec_programs: env var value is: %s\n", env_var_val);
-    printf("exec_programs: full_comd_path is %s\n", full_comd_path);*/
-
     if ((pid = fork()) == -1)
     {
         perror("fork");
@@ -37,6 +34,7 @@ int exec_prgrms(char **tokens)
     }
 	wait(&status);
     }
+    free (line);
     free (tokens);
     free (env_var_val);
     free (full_comd_path);
