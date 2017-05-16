@@ -13,5 +13,5 @@ int exit_shell(char **tokens, char *line)
     }
     free (tokens);
     free (line);
-    exit(exit_value);
+    exit (exit_value);
 }

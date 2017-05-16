@@ -36,7 +36,7 @@ int main(__attribute__((unused)) int argc, __attribute__((unused)) char **argv, 
             printf ("main.c: token[%d] is %s\n", i, tokens[i]);
         }
         printf("main.c: env[0] is %s\n", env[0]);
-        status = exec_bltins(tokens, env, status, line);
+        status = exec_bltins_prgrms(tokens, env, status, line);
     }
     free(tokens);
     return status;

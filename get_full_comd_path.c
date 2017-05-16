@@ -12,7 +12,6 @@ char *get_full_comd_path(char **tokens, char *env_var_val)
     printf("get_full_comd_path: tokens[0] is %s\n", tokens[0]);
     if(stat(tokens[0], &buffer) == 0)
     {
-        /*free (buffer);*/
         printf ("get_full_comd_path: tokens[0] was found!\n");
         return (tokens[0]);
     }
@@ -45,7 +44,6 @@ char *get_full_comd_path(char **tokens, char *env_var_val)
             {
                 printf("get_full_comd_path: stat(path_concat_comd, buffer) == 0\n");
                 free (env_var_paths);
-                /*free_string_array (env_var_paths);*/
                 return(full_comd_path);
             }
             free(full_comd_path);
@@ -54,8 +52,5 @@ char *get_full_comd_path(char **tokens, char *env_var_val)
         free (env_var_paths);
         free (full_comd_path);
     }
-    /*free (buffer);*/
-    /*free_string_array (env_var_paths);*/
-    /*free (full_comd_path);*/
-    return (NULL);/*FIX THIS!!!*/
+    return (NULL);
 }

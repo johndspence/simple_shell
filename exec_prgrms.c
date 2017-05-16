@@ -1,6 +1,6 @@
 #include "shell_hdr.h"
 
-int exec_programs(char **tokens)
+int exec_prgrms(char **tokens)
 {
     char *env_var;
     char *env_var_val;
@@ -35,9 +35,8 @@ int exec_programs(char **tokens)
         printf("I am the father ! %d\n", pid);
 		wait(&status);
         printf("My son process has terminated with the status:%d\n", status);
-        free_string_array (tokens);
+        free (tokens);
         free (env_var_val);
-        /*free (full_comd_path);*/
     }
     free (full_comd_path);
     return (0);

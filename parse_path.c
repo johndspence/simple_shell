@@ -22,13 +22,11 @@ char **parse_path(char *line)
 		printf("Error: malloc - parse_line\n");
 		return (NULL);
 	}
-
 	token = strtok(line, ":");
 	for (i = 0; token; i++)
 	{
 		tokens[i] = token;
 		token = strtok(NULL, ":");
 	}
-	/*tokens[i] = NULL;*/
 	return (tokens);
 }
