@@ -20,7 +20,7 @@ int main(__attribute__((unused)) int argc, __attribute__((unused)) char **argv, 
     tokens = NULL;
     line = NULL;
 
-    signal(SIGINT, sig_handle_ctl_c);
+    /*signal(SIGINT, sig_handle_ctl_c);*/
     while(status == 1)
     {
         prompt();
@@ -32,11 +32,11 @@ int main(__attribute__((unused)) int argc, __attribute__((unused)) char **argv, 
     return status;
 }
 
-void sig_handle_ctl_c(int sign)
+/*void sig_handle_ctl_c(int sign)
 {
         char prompt[] = ">>> ";
         signal(sign, SIG_IGN);
         write(1 , "\nPlease type 'exit' to quit.\n", 29);
         write(1, prompt, 4);
         signal(SIGINT, sig_handle_ctl_c);
-}
+}*/

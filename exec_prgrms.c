@@ -14,25 +14,30 @@ int exec_prgrms(char **tokens, char *line)
 
     if (full_comd_path != NULL)
     {
-    if ((pid = fork()) == -1)
-    {
-        perror("fork");
-        free (full_comd_path);
-        return (1);
-    }
-    if (pid == 0)
-    {
-        if (execve (full_comd_path, tokens, environ) == -1)
+        if ((pid = fork()) == -1)
         {
-            perror(*tokens);
-            free (tokens);
-            free (env_var_val);
+            perror("fork");
             free (full_comd_path);
-            exit(EXIT_FAILURE);
+            return (1);
         }
-        return (EXIT_SUCCESS);
-    }
-	wait(&status);
+        if (pid == 0)
+        {
+            if (execve (full_comd_path, tokens, environ) == -1)
+            {
+                perror(*tokens);
+                free (tokens);
+                free (env_var_val);
+                free (full_comd_path);
+                exit(EXIT_FAILURE);
+            }
+            /*else
+            {
+            free(line);
+            free_str_array(tokens);
+        }*/
+            return (EXIT_SUCCESS);
+        }
+        wait(&status);
     }
     free (line);
     free (tokens);
