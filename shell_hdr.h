@@ -13,14 +13,13 @@
 extern char **environ;
 
 void prompt(void);
-char *get_line(void);
+char *_getline(void);
 char **str_tok(char* line);
 int count_chars(char* line, char space);
 int count_tokens(char* line);
-int strings_compare(char *string_a, char *string_b);
 int exec_bltins_prgrms(char **tokens, char **env, int status, char *line);
 int exit_shell(char **tokens, char *line);
-int print_env(char **env);
+int _env(char **env);
 int exec_prgrms(char **tokens);
 int _strlen(char *string);
 int _strcmp(char *string_a, char *string_b);
@@ -29,7 +28,9 @@ char *_strcat(char *dest, char *src);
 char *get_env_var_val(char *env_var);
 char *get_full_comd_path(char **tokens, char *env_var_val);
 void free_str_array(char **array);
-char **parse_path(char *line);
+char **parse_path(char *line, char);
+int count_chars(char *s1, char seperator);
+int count_words(char *s, char seperator);
 
 void sig_handle_ctl_c(int sign);
 

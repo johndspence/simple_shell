@@ -12,9 +12,10 @@ int exec_prgrms(char **tokens)
     env_var_val = get_env_var_val(env_var);
     full_comd_path = get_full_comd_path(tokens, env_var_val);
 
-    printf("exec_programs: env var value is: %s\n", env_var_val);
-    printf("exec_programs: tokens[0] is %s\n", tokens[0]);
-    printf("exec_programs: full_comd_path is %s\n", full_comd_path);
+    if (full_comd_path != NULL)
+    {
+    /*printf("exec_programs: env var value is: %s\n", env_var_val);
+    printf("exec_programs: full_comd_path is %s\n", full_comd_path);*/
 
     if ((pid = fork()) == -1)
     {
@@ -24,20 +25,20 @@ int exec_prgrms(char **tokens)
     }
     if (pid == 0)
     {
-        printf("I am the son ! %d\n", pid);
-        execve (full_comd_path, tokens, environ);
-        free (tokens);
-        free (env_var_val);
-        free (full_comd_path);
+        if (execve (full_comd_path, tokens, environ) == -1)
+        {
+            perror(*tokens);
+            free (tokens);
+            free (env_var_val);
+            free (full_comd_path);
+            exit(EXIT_FAILURE);
+        }
+        return (EXIT_SUCCESS);
     }
-    else
-    {
-        printf("I am the father ! %d\n", pid);
-		wait(&status);
-        printf("My son process has terminated with the status:%d\n", status);
-        free (tokens);
-        free (env_var_val);
+	wait(&status);
     }
+    free (tokens);
+    free (env_var_val);
     free (full_comd_path);
     return (0);
 }

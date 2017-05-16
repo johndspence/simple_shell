@@ -1,6 +1,6 @@
 #include "shell_hdr.h"
 
-int print_env(char **env)
+int _env(char **env)
 {
     int i;
 

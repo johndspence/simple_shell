@@ -1,6 +1,6 @@
 #include "shell_hdr.h"
 
-char *get_line()
+char *_getline()
 {
     char *line_ptr;
     size_t buf_size;
@@ -8,9 +8,7 @@ char *get_line()
 
     line_ptr = NULL;
     buf_size = 0;
-
     line_len = getline(&line_ptr, &buf_size, stdin);
-    printf ("line length is %lu\n", (unsigned long int) line_len);
 
     if (line_len == -1)
     {

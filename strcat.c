@@ -11,6 +11,6 @@ char *_strcat(char *dest, char *src)
 		dest[len + i] = src[i];
 	}
 	dest[len + i] = '\0';
-printf("DEST= %s\n", dest);
+/*printf("DEST= %s\n", dest);*/
 	return (dest);
 }

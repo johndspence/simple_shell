@@ -15,34 +15,24 @@ int main(__attribute__((unused)) int argc, __attribute__((unused)) char **argv, 
     char* line;
     char** tokens;
     int status;
-    int i;
 
     status = 1;
     tokens = NULL;
     line = NULL;
 
-    /*signal(SIGINT, sig_handle_ctl_c);*/
+    signal(SIGINT, sig_handle_ctl_c);
     while(status == 1)
     {
-
         prompt();
-        line = get_line();
-        printf ("main.c: you typed %s", line);
+        line = _getline();
         tokens = str_tok(line);
-
-        for (i = 0; tokens[i] != NULL; i++)
-        {
-            printf ("main.c: entering token loop\n");
-            printf ("main.c: token[%d] is %s\n", i, tokens[i]);
-        }
-        printf("main.c: env[0] is %s\n", env[0]);
         status = exec_bltins_prgrms(tokens, env, status, line);
     }
     free(tokens);
     return status;
 }
 
-/*void sig_handle_ctl_c(int sign)
+void sig_handle_ctl_c(int sign)
 {
         char prompt[] = ">>> ";
 
@@ -50,4 +40,4 @@ int main(__attribute__((unused)) int argc, __attribute__((unused)) char **argv, 
         write(1 , "\nPlease type 'exit' to quit.\n", 29);
         write(1, prompt, 4);
         signal(SIGINT, sig_handle_ctl_c);
-}*/
+}
