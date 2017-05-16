@@ -19,13 +19,14 @@ int exec_programs(char **tokens)
     if ((pid = fork()) == -1)
     {
         perror("fork");
+        free (full_comd_path);
         return (1);
     }
     if (pid == 0)
     {
         printf("I am the son ! %d\n", pid);
         execve (full_comd_path, tokens, environ);
-        free_string_array (tokens);
+        free (tokens);
         free (env_var_val);
         free (full_comd_path);
     }
@@ -34,9 +35,10 @@ int exec_programs(char **tokens)
         printf("I am the father ! %d\n", pid);
 		wait(&status);
         printf("My son process has terminated with the status:%d\n", status);
-        /*free_string_array (tokens);*/
-        /*free (env_var_val);*/
+        free_string_array (tokens);
+        free (env_var_val);
         /*free (full_comd_path);*/
     }
+    free (full_comd_path);
     return (0);
 }

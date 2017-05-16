@@ -27,20 +27,18 @@ int main(__attribute__((unused)) int argc, __attribute__((unused)) char **argv, 
 
         prompt();
         line = get_line();
-
         printf ("main.c: you typed %s", line);
         tokens = str_tok(line);
-        free (line);
+
         for (i = 0; tokens[i] != NULL; i++)
         {
             printf ("main.c: entering token loop\n");
             printf ("main.c: token[%d] is %s\n", i, tokens[i]);
         }
         printf("main.c: env[0] is %s\n", env[0]);
-        status = exec_bltins(tokens, env, status);
-
+        status = exec_bltins(tokens, env, status, line);
     }
-    free_string_array(tokens);
+    free(tokens);
     return status;
 }
 

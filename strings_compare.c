@@ -5,7 +5,7 @@ int strings_compare(char *string_a, char *string_b)
     int i;
     i = 0;
 
-    while (string_a[i] == string_b[i] && string_a[i] != '\0')
+    while ((string_a[i] == string_b[i]) && string_a[i] != '\0')
     {
         i++;
     }

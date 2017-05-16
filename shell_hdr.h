@@ -18,8 +18,8 @@ char **str_tok(char* line);
 int count_chars(char* line, char space);
 int count_tokens(char* line);
 int strings_compare(char *string_a, char *string_b);
-int exec_bltins(char **tokens, char **env, int status);
-int exit_shell(char **tokens);
+int exec_bltins(char **tokens, char **env, int status, char *line);
+int exit_shell(char **tokens, char *line);
 int print_env(char **env);
 int exec_programs(char **tokens);
 int _strlen(char *string);
@@ -29,6 +29,7 @@ char *_strcat(char *dest, char *src);
 char *get_env_var_val(char *env_var);
 char *get_full_comd_path(char **tokens, char *env_var_val);
 void free_string_array(char **array);
+char **parse_path(char *line);
 
 void sig_handle_ctl_c(int sign);
 

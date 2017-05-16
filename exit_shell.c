@@ -1,6 +1,6 @@
 #include "shell_hdr.h"
 
-int exit_shell(char **tokens)
+int exit_shell(char **tokens, char *line)
 {
     int exit_value;
 
@@ -11,6 +11,7 @@ int exit_shell(char **tokens)
     {
         exit_value = atoi(tokens[1]);
     }
-    free_string_array(tokens);
+    free (tokens);
+    free (line);
     exit(exit_value);
 }
