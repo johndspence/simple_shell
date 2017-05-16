@@ -8,7 +8,7 @@ int exit_shell(char **tokens, char *line)
 
     if (tokens[1] != NULL)
     {
-        exit_value = atoi(tokens[1]);
+        exit_value = string_to_integer(tokens[1]);
     }
     free (tokens);
     free (line);

@@ -35,6 +35,6 @@ void _printf(char *str);
 void sig_handle_ctl_c(int sign);
 int integer_length(int n);
 char *integer_to_string(int n);
-
+int string_to_integer(char *string);
 
 #endif
