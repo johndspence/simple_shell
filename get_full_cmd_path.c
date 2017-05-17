@@ -11,7 +11,7 @@ char *get_full_comd_path(char **tokens, char *env_var_val)
 	if(stat(tokens[0], &buffer) == 0)
 	{
 		_printf ("get_full_comd_path: tokens[0] was found!\n");
-		return (tokens[0]);
+		return (strdup(tokens[0]));
 	}
 	else
 	{
