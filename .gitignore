@@ -37,4 +37,5 @@
 ./trash
 
 # Editor artifacts
-*.~
+*.c~
+*.h~

@@ -37,4 +37,4 @@ int integer_length(int n);
 char *integer_to_string(int n);
 int string_to_integer(char *string);
 
-#endif
+#endif /* HEADER */
