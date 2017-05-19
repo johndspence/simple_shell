@@ -1,5 +1,13 @@
 #include "shell_hdr.h"
 
+/**
+ * _strcat - Concatenates two strings.
+ *
+ * @dest: Destination string.
+ * @src: Source string.
+ *
+ * Return: Concatenated string (char *).
+ */
 char *_strcat(char *dest, char *src)
 {
 	size_t i;

@@ -1,5 +1,11 @@
 #include "shell_hdr.h"
-
+/**
+ * exit_shell - Exits shell.
+ * @tokens: Commands received from stdin.
+ * @line: Line received from stdin.
+ *
+ * Return: status (int).
+ */
 int exit_shell(char **tokens, char *line)
 {
 	int exit_value;
@@ -10,7 +16,7 @@ int exit_shell(char **tokens, char *line)
 	{
 		exit_value = string_to_integer(tokens[1]);
 	}
-	free (tokens);
-	free (line);
-	exit (exit_value);
+	free(tokens);
+	free(line);
+	exit(exit_value);
 }

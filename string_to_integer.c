@@ -1,5 +1,12 @@
 #include "shell_hdr.h"
 
+/**
+ * string_to_integer - Converts string to integer.
+ *
+ * @string: String to be converted.
+ *
+ * Return: Integer conversion (int).
+ */
 int string_to_integer(char *string)
 {
 	int i;
@@ -20,7 +27,7 @@ int string_to_integer(char *string)
 		}
 		else if (string[i] > '9' || string[i] < '0')
 		{
-			return 0;
+			return (0);
 		}
 		else
 		{

@@ -1,6 +1,13 @@
 #include "shell_hdr.h"
 #define BUFFER 128
 
+/**
+ * get_env_var_val - Retrieves environment variables values.
+ *
+ * @env_var: environment variable array.
+ *
+ * Return: environment variable value.
+ */
 char *get_env_var_val(char *env_var)
 {
 	size_t len;
@@ -14,7 +21,7 @@ char *get_env_var_val(char *env_var)
 	if (!env_var_val)
 	{
 		_printf("Error get_env_var_val->malloc\n");
-		free (env_var_val);
+		free(env_var_val);
 		return (NULL);
 	}
 

@@ -1,1 +1,36 @@
-man
+.TH simple_shell "1" "18 May 2017" "simple_shell(1)" "v.0.1"
+.SH NAME
+simple_shell - command line interpreter.
+.SH SYNOPSIS
+.BI "simple_shell"
+[command_string | file]
+.SH DESCRIPTION
+.BI "simple_shell"
+is a simple command language interpreter that executes commands from stdin or from a file.
+.SH COMMANDS
+.IP "exit [status]"
+Terminates the shell.
+.IP "echo [-n] args.."
+Print the arguments to stdout -
+.BI "man ECHO(1)"
+.IP env
+Prints environment variables to stdout.
+.IP ls
+List directory contents -
+.IP $?
+Echo return value to stdout. -
+.IP $$
+Echo ppid to stdout. -
+.BI "man LS(1)"
+.IP mv
+Move (rename) files -
+.BI "man MV(1)"
+.IP cp
+Copy files and directories -
+.BI "man CP(1)"
+.SH BUGS
+- -
+.SH AUTHOR
+github.com/johndspence
+.SH SEE ALSO
+.BI "BASH(1)"

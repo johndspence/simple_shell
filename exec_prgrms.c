@@ -1,5 +1,12 @@
 #include "shell_hdr.h"
 
+/**
+ * exec_prgrms - Executes shell programs with fork.
+ * @tokens: Commands received from stdin.
+ * @line: Commands received from stdin.
+ *
+ * Return: status (int).
+ */
 int exec_prgrms(char **tokens, char *line)
 {
 	char *env_var;
@@ -14,29 +21,30 @@ int exec_prgrms(char **tokens, char *line)
 
 	if (full_comd_path != NULL)
 	{
-		if ((pid = fork()) == -1)
+		pid = fork();
+		if (pid == -1)
 		{
-			perror ("fork");
-			free (full_comd_path);
+			perror("fork");
+			free(full_comd_path);
 			return (1);
 		}
 		if (pid == 0)
 		{
-			if (execve (full_comd_path, tokens, environ) == -1)
+			if (execve(full_comd_path, tokens, environ) == -1)
 			{
-				perror (*tokens);
-				free (tokens);
-				free (env_var_val);
-				free (full_comd_path);
-				exit (EXIT_FAILURE);
+				perror(*tokens);
+				free(tokens);
+				free(env_var_val);
+				free(full_comd_path);
+				exit(EXIT_FAILURE);
 			}
 			return (EXIT_SUCCESS);
 		}
 		wait(&status);
 	}
-	free (line);
-	free (tokens);
-	free (env_var_val);
-	free (full_comd_path);
+	free(line);
+	free(tokens);
+	free(env_var_val);
+	free(full_comd_path);
 	return (0);
 }

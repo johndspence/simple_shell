@@ -1,5 +1,12 @@
 #include "shell_hdr.h"
 
+/**
+ * get_full_comd_path - Builds full command path.
+ * @tokens: Parsed command line input.
+ * @env_var_val: Environment variable value.
+ *
+ * Return: Full command path.
+ */
 char *get_full_comd_path(char **tokens, char *env_var_val)
 {
 	struct stat buffer;
@@ -8,12 +15,8 @@ char *get_full_comd_path(char **tokens, char *env_var_val)
 	int i;
 	int full_comd_path_len;
 
-	if(stat(tokens[0], &buffer) == 0)
-	{
-		_printf ("get_full_comd_path: tokens[0] was found!\n");
-		return (strdup(tokens[0]));
-	}
-	else
+	if (stat(tokens[0], &buffer) == 0)
+		return (_strdup(tokens[0]));
 	{
 		i = 0;
 		env_var_paths = parse_path(env_var_val, ':');
@@ -23,17 +26,17 @@ char *get_full_comd_path(char **tokens, char *env_var_val)
 			full_comd_path = malloc(sizeof(char) * full_comd_path_len);
 			if (!full_comd_path)
 			{
-				_printf ("Error: get_full_comd_path->malloc\n");
+				_printf("Error: get_full_comd_path->malloc\n");
 				return (NULL);
 			}
-			memset(full_comd_path, 0, full_comd_path_len);
+			mem_set(full_comd_path, 0, full_comd_path_len);
 			full_comd_path = _strcat(full_comd_path, env_var_paths[i]);
 			full_comd_path = _strcat(full_comd_path, "/");
 			full_comd_path = _strcat(full_comd_path, tokens[0]);
-			if(stat(full_comd_path, &buffer) == 0)
+			if (stat(full_comd_path, &buffer) == 0)
 			{
 				free_str_array(env_var_paths);
-				return(full_comd_path);
+				return (full_comd_path);
 			}
 			free(full_comd_path);
 			i++;

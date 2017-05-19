@@ -1,5 +1,12 @@
 #include "shell_hdr.h"
 
+/**
+ * _env - prints environment variables
+ * @env: array of env variables
+ *
+ *
+ * Return: 1.
+ */
 int _env(char **env)
 {
 	int i;

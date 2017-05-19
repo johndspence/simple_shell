@@ -1,5 +1,12 @@
 #include "shell_hdr.h"
 
+/**
+ * str_tok - Converts a string into tokens.
+ *
+ * @line: String to be converted.
+ *
+ * Return: String array of tokens (chr **).
+ */
 char **str_tok(char *line)
 {
 	char **tokens;

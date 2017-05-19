@@ -1,3 +1,12 @@
+#include "shell_hdr.h"
+
+/**
+ * integer_length - Determines number of chars for an integer representation.
+ *
+ * @n: Integer to be evaluated.
+ *
+ * Return: Number of chars.
+ */
 int integer_length(int n)
 {
 	int i;
@@ -6,5 +15,5 @@ int integer_length(int n)
 	{
 		n = n / 10;
 	}
-	return i;
+	return (i);
 }

@@ -1,11 +1,20 @@
 #include "shell_hdr.h"
 
+/**
+ * integer_to_string - Converts integer to string.
+ *
+ * @n: Integer to be converted.
+ *
+ *
+ * Return: string (char *)
+ */
 char *integer_to_string(int n)
 {
 	int i;
 	int len;
 	int neg;
 	char *str;
+
 	if (n == 0)
 	{
 		return ("0");
@@ -23,7 +32,7 @@ char *integer_to_string(int n)
 	str = malloc(sizeof(char) * (len + neg + 1));
 	if (str == NULL)
 	{
-		return NULL;
+		return (NULL);
 	}
 	str[len + neg] = '\0';
 	for (i = 1; i <= len; i++)
@@ -35,5 +44,5 @@ char *integer_to_string(int n)
 	{
 		str[0] = '-';
 	}
-	return str;
+	return (str);
 }

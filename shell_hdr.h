@@ -14,9 +14,9 @@ extern char **environ;
 
 void prompt(void);
 char *_getline(void);
-char **str_tok(char* line);
-int count_chars(char* line, char space);
-int count_tokens(char* line);
+char **str_tok(char *line);
+int count_chars(char *line, char space);
+int count_tokens(char *line);
 int exec_bltins_prgrms(char **tokens, char **env, int status, char *line);
 int exit_shell(char **tokens, char *line);
 int _env(char **env);
@@ -36,5 +36,7 @@ void sig_handle_ctl_c(int sign);
 int integer_length(int n);
 char *integer_to_string(int n);
 int string_to_integer(char *string);
+char *_strdup(char *str);
+void mem_set(void *mem, int byte, size_t n);
 
 #endif /* HEADER */
