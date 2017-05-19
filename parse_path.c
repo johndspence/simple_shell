@@ -10,18 +10,14 @@
  */
 char **parse_path(char *string, char delim)
 {
-	int token_count;
-	int token_iter;
-	int str_iter;
+	int token_count, token_iter, str_iter;
 	char **tokens;
 	char *token;
 
 	token_count = count_words(string, delim);
 	tokens = malloc(sizeof(char *) * (token_count + 1));
 	if (tokens == NULL)
-	{
 		return (NULL);
-	}
 	token_iter = 0;
 	str_iter = 0;
 	while (token_iter < token_count)
@@ -40,15 +36,11 @@ char **parse_path(char *string, char delim)
 			}
 			*token = '\0';
 			while (string[str_iter] == delim && string[str_iter] != '\0')
-			{
 				str_iter++;
-			}
 			token_iter++;
 		}
 		else
-		{
 			str_iter++;
-		}
 	}
 	tokens[token_count] = (NULL);
 	return (tokens);

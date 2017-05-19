@@ -1,4 +1,7 @@
 # simple_shell
 simple shell for linux
 
-gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
+Compile: gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
+
+# Authors
+John Spence

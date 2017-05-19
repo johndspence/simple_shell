@@ -1,0 +1,371 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '--global',
+1 verbose cli   'generate' ]
+2 info using npm@1.3.10
+3 info using node@v0.10.25
+4 verbose cache add [ 'generate', null ]
+5 verbose cache add name=undefined spec="generate" args=["generate",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'generate',
+6 verbose parsed url   path: 'generate',
+6 verbose parsed url   href: 'generate' }
+7 silly lockFile 9e59d425-generate generate
+8 verbose lock generate /home/vagrant/.npm/9e59d425-generate.lock
+9 silly lockFile 9e59d425-generate generate
+10 silly lockFile 9e59d425-generate generate
+11 verbose addNamed [ 'generate', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile a538172f-generate generate@
+14 verbose lock generate@ /home/vagrant/.npm/a538172f-generate.lock
+15 silly addNameRange { name: 'generate', range: '*', hasData: false }
+16 verbose url raw generate
+17 verbose url resolving [ 'https://registry.npmjs.org/', './generate' ]
+18 verbose url resolved https://registry.npmjs.org/generate
+19 info trying registry request attempt 1 at 05:43:56
+20 http GET https://registry.npmjs.org/generate
+21 http 200 https://registry.npmjs.org/generate
+22 silly registry.get cb [ 200,
+22 silly registry.get   { server: 'nginx/1.10.3',
+22 silly registry.get     'content-type': 'application/json',
+22 silly registry.get     'last-modified': 'Sat, 22 Oct 2016 03:22:57 GMT',
+22 silly registry.get     etag: '"580adb91-3456d"',
+22 silly registry.get     'cache-control': 'max-age=300',
+22 silly registry.get     'content-length': '214381',
+22 silly registry.get     'accept-ranges': 'bytes',
+22 silly registry.get     date: 'Fri, 19 May 2017 05:43:57 GMT',
+22 silly registry.get     via: '1.1 varnish',
+22 silly registry.get     age: '0',
+22 silly registry.get     connection: 'keep-alive',
+22 silly registry.get     'x-served-by': 'cache-sjc3636-SJC',
+22 silly registry.get     'x-cache': 'MISS',
+22 silly registry.get     'x-cache-hits': '0',
+22 silly registry.get     'x-timer': 'S1495172637.809280,VS0,VE216',
+22 silly registry.get     vary: 'Accept-Encoding' } ]
+23 silly addNameRange number 2 { name: 'generate', range: '*', hasData: true }
+24 silly addNameRange versions [ 'generate',
+24 silly addNameRange   [ '0.1.0',
+24 silly addNameRange     '0.1.1',
+24 silly addNameRange     '0.2.0',
+24 silly addNameRange     '0.2.1',
+24 silly addNameRange     '0.2.2',
+24 silly addNameRange     '0.3.0',
+24 silly addNameRange     '0.3.2',
+24 silly addNameRange     '0.3.3',
+24 silly addNameRange     '0.3.4',
+24 silly addNameRange     '0.3.5',
+24 silly addNameRange     '0.3.6',
+24 silly addNameRange     '0.4.0',
+24 silly addNameRange     '0.4.1',
+24 silly addNameRange     '0.4.2',
+24 silly addNameRange     '0.4.3',
+24 silly addNameRange     '0.4.4',
+24 silly addNameRange     '0.4.5',
+24 silly addNameRange     '0.4.6',
+24 silly addNameRange     '0.4.7',
+24 silly addNameRange     '0.4.8',
+24 silly addNameRange     '0.4.9',
+24 silly addNameRange     '0.4.10',
+24 silly addNameRange     '0.4.11',
+24 silly addNameRange     '0.4.12',
+24 silly addNameRange     '0.4.13',
+24 silly addNameRange     '0.4.14',
+24 silly addNameRange     '0.5.0',
+24 silly addNameRange     '0.5.1',
+24 silly addNameRange     '0.5.2',
+24 silly addNameRange     '0.5.3',
+24 silly addNameRange     '0.5.4',
+24 silly addNameRange     '0.5.5',
+24 silly addNameRange     '0.6.0',
+24 silly addNameRange     '0.6.3',
+24 silly addNameRange     '0.7.0',
+24 silly addNameRange     '0.7.1',
+24 silly addNameRange     '0.7.2',
+24 silly addNameRange     '0.7.3',
+24 silly addNameRange     '0.7.5',
+24 silly addNameRange     '0.8.0',
+24 silly addNameRange     '0.8.2',
+24 silly addNameRange     '0.8.3',
+24 silly addNameRange     '0.8.4',
+24 silly addNameRange     '0.8.6',
+24 silly addNameRange     '0.8.7',
+24 silly addNameRange     '0.9.0',
+24 silly addNameRange     '0.9.1',
+24 silly addNameRange     '0.9.3',
+24 silly addNameRange     '0.9.4',
+24 silly addNameRange     '0.9.5',
+24 silly addNameRange     '0.9.6',
+24 silly addNameRange     '0.9.7',
+24 silly addNameRange     '0.9.8',
+24 silly addNameRange     '0.10.0',
+24 silly addNameRange     '0.11.0',
+24 silly addNameRange     '0.11.1',
+24 silly addNameRange     '0.11.2',
+24 silly addNameRange     '0.12.0',
+24 silly addNameRange     '0.12.1',
+24 silly addNameRange     '0.13.0',
+24 silly addNameRange     '0.13.1' ] ]
+25 verbose addNamed [ 'generate', '0.13.1' ]
+26 verbose addNamed [ '0.13.1', '0.13.1' ]
+27 silly lockFile 8ac3e4da-generate-0-13-1 generate@0.13.1
+28 verbose lock generate@0.13.1 /home/vagrant/.npm/8ac3e4da-generate-0-13-1.lock
+29 silly lockFile 0a868042-org-generate-generate-0-13-1-tgz https://registry.npmjs.org/generate/-/generate-0.13.1.tgz
+30 verbose lock https://registry.npmjs.org/generate/-/generate-0.13.1.tgz /home/vagrant/.npm/0a868042-org-generate-generate-0-13-1-tgz.lock
+31 verbose addRemoteTarball [ 'https://registry.npmjs.org/generate/-/generate-0.13.1.tgz',
+31 verbose addRemoteTarball   '04a94aa0f50ed0b1f2c8b2868cebd3ddf8d312bf' ]
+32 info retry fetch attempt 1 at 05:43:57
+33 verbose fetch to= /home/vagrant/tmp/npm-16948-VdOPBYM7/1495172637447-0.9757309537380934/tmp.tgz
+34 http GET https://registry.npmjs.org/generate/-/generate-0.13.1.tgz
+35 http 200 https://registry.npmjs.org/generate/-/generate-0.13.1.tgz
+36 verbose tar unpack /home/vagrant/tmp/npm-16948-VdOPBYM7/1495172637447-0.9757309537380934/tmp.tgz
+37 silly lockFile 2c795c4a-37447-0-9757309537380934-package tar:///home/vagrant/tmp/npm-16948-VdOPBYM7/1495172637447-0.9757309537380934/package
+38 verbose lock tar:///home/vagrant/tmp/npm-16948-VdOPBYM7/1495172637447-0.9757309537380934/package /home/vagrant/.npm/2c795c4a-37447-0-9757309537380934-package.lock
+39 silly lockFile 90acb54d-37447-0-9757309537380934-tmp-tgz tar:///home/vagrant/tmp/npm-16948-VdOPBYM7/1495172637447-0.9757309537380934/tmp.tgz
+40 verbose lock tar:///home/vagrant/tmp/npm-16948-VdOPBYM7/1495172637447-0.9757309537380934/tmp.tgz /home/vagrant/.npm/90acb54d-37447-0-9757309537380934-tmp-tgz.lock
+41 silly gunzTarPerm modes [ '755', '644' ]
+42 silly gunzTarPerm extractEntry package.json
+43 silly gunzTarPerm extractEntry README.md
+44 silly gunzTarPerm extractEntry LICENSE
+45 silly gunzTarPerm extractEntry index.js
+46 silly gunzTarPerm extractEntry CHANGELOG.md
+47 silly gunzTarPerm extractEntry bin/generate.js
+48 silly gunzTarPerm extractEntry lib/commands.js
+49 silly gunzTarPerm extractEntry lib/defaults.js
+50 silly gunzTarPerm extractEntry lib/generator.js
+51 silly gunzTarPerm extractEntry lib/list.js
+52 silly gunzTarPerm extractEntry lib/mixins.js
+53 silly gunzTarPerm extractEntry lib/plugins.js
+54 silly gunzTarPerm extractEntry lib/tasks.js
+55 silly gunzTarPerm extractEntry lib/utils.js
+56 silly gunzTarPerm extractEntry lib/commands/index.js
+57 silly gunzTarPerm extractEntry lib/commands/silent.js
+58 silly gunzTarPerm extractEntry lib/commands/version.js
+59 silly gunzTarPerm extractEntry lib/templates/generator.js
+60 silly gunzTarPerm extractEntry lib/templates/file.md
+61 silly lockFile 2c795c4a-37447-0-9757309537380934-package tar:///home/vagrant/tmp/npm-16948-VdOPBYM7/1495172637447-0.9757309537380934/package
+62 silly lockFile 2c795c4a-37447-0-9757309537380934-package tar:///home/vagrant/tmp/npm-16948-VdOPBYM7/1495172637447-0.9757309537380934/package
+63 silly lockFile 90acb54d-37447-0-9757309537380934-tmp-tgz tar:///home/vagrant/tmp/npm-16948-VdOPBYM7/1495172637447-0.9757309537380934/tmp.tgz
+64 silly lockFile 90acb54d-37447-0-9757309537380934-tmp-tgz tar:///home/vagrant/tmp/npm-16948-VdOPBYM7/1495172637447-0.9757309537380934/tmp.tgz
+65 verbose tar pack [ '/home/vagrant/.npm/generate/0.13.1/package.tgz',
+65 verbose tar pack   '/home/vagrant/tmp/npm-16948-VdOPBYM7/1495172637447-0.9757309537380934/package' ]
+66 verbose tarball /home/vagrant/.npm/generate/0.13.1/package.tgz
+67 verbose folder /home/vagrant/tmp/npm-16948-VdOPBYM7/1495172637447-0.9757309537380934/package
+68 silly lockFile 2c795c4a-37447-0-9757309537380934-package tar:///home/vagrant/tmp/npm-16948-VdOPBYM7/1495172637447-0.9757309537380934/package
+69 verbose lock tar:///home/vagrant/tmp/npm-16948-VdOPBYM7/1495172637447-0.9757309537380934/package /home/vagrant/.npm/2c795c4a-37447-0-9757309537380934-package.lock
+70 silly lockFile 7a9d88b7--npm-generate-0-13-1-package-tgz tar:///home/vagrant/.npm/generate/0.13.1/package.tgz
+71 verbose lock tar:///home/vagrant/.npm/generate/0.13.1/package.tgz /home/vagrant/.npm/7a9d88b7--npm-generate-0-13-1-package-tgz.lock
+72 silly lockFile 2c795c4a-37447-0-9757309537380934-package tar:///home/vagrant/tmp/npm-16948-VdOPBYM7/1495172637447-0.9757309537380934/package
+73 silly lockFile 2c795c4a-37447-0-9757309537380934-package tar:///home/vagrant/tmp/npm-16948-VdOPBYM7/1495172637447-0.9757309537380934/package
+74 silly lockFile 7a9d88b7--npm-generate-0-13-1-package-tgz tar:///home/vagrant/.npm/generate/0.13.1/package.tgz
+75 silly lockFile 7a9d88b7--npm-generate-0-13-1-package-tgz tar:///home/vagrant/.npm/generate/0.13.1/package.tgz
+76 silly lockFile 9f2cec7a-rant-npm-generate-0-13-1-package /home/vagrant/.npm/generate/0.13.1/package
+77 verbose lock /home/vagrant/.npm/generate/0.13.1/package /home/vagrant/.npm/9f2cec7a-rant-npm-generate-0-13-1-package.lock
+78 silly lockFile 9f2cec7a-rant-npm-generate-0-13-1-package /home/vagrant/.npm/generate/0.13.1/package
+79 silly lockFile 9f2cec7a-rant-npm-generate-0-13-1-package /home/vagrant/.npm/generate/0.13.1/package
+80 verbose tar unpack /home/vagrant/.npm/generate/0.13.1/package.tgz
+81 silly lockFile 116078dc-rant-npm-generate-0-13-1-package tar:///home/vagrant/.npm/generate/0.13.1/package
+82 verbose lock tar:///home/vagrant/.npm/generate/0.13.1/package /home/vagrant/.npm/116078dc-rant-npm-generate-0-13-1-package.lock
+83 silly lockFile 7a9d88b7--npm-generate-0-13-1-package-tgz tar:///home/vagrant/.npm/generate/0.13.1/package.tgz
+84 verbose lock tar:///home/vagrant/.npm/generate/0.13.1/package.tgz /home/vagrant/.npm/7a9d88b7--npm-generate-0-13-1-package-tgz.lock
+85 silly gunzTarPerm modes [ '755', '644' ]
+86 silly gunzTarPerm extractEntry package.json
+87 silly gunzTarPerm extractEntry README.md
+88 silly gunzTarPerm extractEntry index.js
+89 silly gunzTarPerm extractEntry bin/generate.js
+90 silly gunzTarPerm extractEntry lib/commands.js
+91 silly gunzTarPerm extractEntry lib/defaults.js
+92 silly gunzTarPerm extractEntry lib/generator.js
+93 silly gunzTarPerm extractEntry lib/list.js
+94 silly gunzTarPerm extractEntry lib/mixins.js
+95 silly gunzTarPerm extractEntry lib/plugins.js
+96 silly gunzTarPerm extractEntry lib/tasks.js
+97 silly gunzTarPerm extractEntry lib/utils.js
+98 silly gunzTarPerm extractEntry lib/commands/index.js
+99 silly gunzTarPerm extractEntry lib/commands/silent.js
+100 silly gunzTarPerm extractEntry lib/commands/version.js
+101 silly gunzTarPerm extractEntry lib/templates/generator.js
+102 silly gunzTarPerm extractEntry lib/templates/file.md
+103 silly lockFile 116078dc-rant-npm-generate-0-13-1-package tar:///home/vagrant/.npm/generate/0.13.1/package
+104 silly lockFile 116078dc-rant-npm-generate-0-13-1-package tar:///home/vagrant/.npm/generate/0.13.1/package
+105 silly lockFile 7a9d88b7--npm-generate-0-13-1-package-tgz tar:///home/vagrant/.npm/generate/0.13.1/package.tgz
+106 silly lockFile 7a9d88b7--npm-generate-0-13-1-package-tgz tar:///home/vagrant/.npm/generate/0.13.1/package.tgz
+107 verbose chmod /home/vagrant/.npm/generate/0.13.1/package.tgz 644
+108 verbose chown /home/vagrant/.npm/generate/0.13.1/package.tgz [ 1000, 1000 ]
+109 silly lockFile 0a868042-org-generate-generate-0-13-1-tgz https://registry.npmjs.org/generate/-/generate-0.13.1.tgz
+110 silly lockFile 0a868042-org-generate-generate-0-13-1-tgz https://registry.npmjs.org/generate/-/generate-0.13.1.tgz
+111 silly lockFile 8ac3e4da-generate-0-13-1 generate@0.13.1
+112 silly lockFile 8ac3e4da-generate-0-13-1 generate@0.13.1
+113 silly lockFile a538172f-generate generate@
+114 silly lockFile a538172f-generate generate@
+115 silly resolved [ { name: 'generate',
+115 silly resolved     description: 'Command line tool and developer framework for scaffolding out new GitHub projects. Generate offers the robustness and configurability of Yeoman, the expressiveness and simplicity of Slush, and more powerful flow control and composability than either.',
+115 silly resolved     version: '0.13.1',
+115 silly resolved     homepage: 'https://github.com/generate/generate',
+115 silly resolved     author:
+115 silly resolved      { name: 'Jon Schlinkert',
+115 silly resolved        url: 'https://github.com/jonschlinkert' },
+115 silly resolved     contributors: [ [Object], [Object], [Object], [Object] ],
+115 silly resolved     repository: { type: 'git', url: 'git://github.com/generate/generate' },
+115 silly resolved     bugs: { url: 'https://github.com/generate/generate/issues' },
+115 silly resolved     license: 'MIT',
+115 silly resolved     files: [ 'bin', 'index.js', 'lib' ],
+115 silly resolved     main: 'index.js',
+115 silly resolved     preferGlobal: true,
+115 silly resolved     bin: { gen: 'bin/generate.js', generate: 'bin/generate.js' },
+115 silly resolved     engines: { node: '>=5.0' },
+115 silly resolved     scripts: { test: 'mocha' },
+115 silly resolved     dependencies:
+115 silly resolved      { 'ask-when': '^0.1.7',
+115 silly resolved        'assemble-core': '^0.26.0',
+115 silly resolved        'assemble-loader': '^0.6.1',
+115 silly resolved        'base-fs-conflicts': '^0.1.9',
+115 silly resolved        'base-fs-rename': '^0.1.4',
+115 silly resolved        'base-generators': '^0.4.5',
+115 silly resolved        'base-npm': '^0.4.1',
+115 silly resolved        'base-npm-prompt': '^0.2.1',
+115 silly resolved        'base-pipeline': '^0.3.2',
+115 silly resolved        'base-questions': '^0.9.0',
+115 silly resolved        'base-runner': '^0.8.2',
+115 silly resolved        'base-runtimes': '^0.2.0',
+115 silly resolved        'base-store': '^0.4.4',
+115 silly resolved        'bdd-stdin': '^0.2.0',
+115 silly resolved        'common-config': '^0.1.0',
+115 silly resolved        'data-store': '^0.16.1',
+115 silly resolved        debug: '^2.2.0',
+115 silly resolved        'define-property': '^0.2.5',
+115 silly resolved        'export-files': '^2.1.1',
+115 silly resolved        'extend-shallow': '^2.0.1',
+115 silly resolved        'fs-exists-sync': '^0.1.0',
+115 silly resolved        'generate-collections': '^0.3.6',
+115 silly resolved        'generate-defaults': '^0.6.5',
+115 silly resolved        'get-value': '^2.0.6',
+115 silly resolved        'global-modules': '^0.2.3',
+115 silly resolved        'helper-ask': '^0.2.1',
+115 silly resolved        isobject: '^2.1.0',
+115 silly resolved        'lazy-cache': '^2.0.1',
+115 silly resolved        'log-utils': '^0.2.1',
+115 silly resolved        'macro-store': '^0.3.1',
+115 silly resolved        'resolve-file': '^0.2.1',
+115 silly resolved        'set-blocking': '^2.0.0',
+115 silly resolved        'strip-color': '^0.1.0',
+115 silly resolved        'text-table': '^0.2.0',
+115 silly resolved        through2: '^2.0.1',
+115 silly resolved        'update-notifier': '^1.0.2',
+115 silly resolved        'yargs-parser': '^4.0.2' },
+115 silly resolved     devDependencies:
+115 silly resolved      { 'base-config-process': '^0.1.9',
+115 silly resolved        'base-test-runner': '^0.2.0',
+115 silly resolved        'base-test-suite': '^0.2.4',
+115 silly resolved        'cross-spawn': '^4.0.2',
+115 silly resolved        'generate-foo': '^0.1.5',
+115 silly resolved        'generator-util': '^0.2.9',
+115 silly resolved        'glob-keys': '^0.1.1',
+115 silly resolved        gulp: '^3.9.1',
+115 silly resolved        'gulp-eslint': '^3.0.1',
+115 silly resolved        'gulp-format-md': '^0.1.11',
+115 silly resolved        'gulp-istanbul': '^1.1.1',
+115 silly resolved        'gulp-mocha': '^3.0.1',
+115 silly resolved        'gulp-unused': '^0.2.0',
+115 silly resolved        'helper-changelog': '^0.3.0',
+115 silly resolved        'is-absolute': '^0.2.5',
+115 silly resolved        mocha: '^3.1.0',
+115 silly resolved        'npm-install-global': '^0.1.2',
+115 silly resolved        resolve: '^1.1.7',
+115 silly resolved        should: '^11.1.0' },
+115 silly resolved     keywords:
+115 silly resolved      [ 'app',
+115 silly resolved        'boilerplate',
+115 silly resolved        'build',
+115 silly resolved        'cli',
+115 silly resolved        'cli-app',
+115 silly resolved        'create',
+115 silly resolved        'dev',
+115 silly resolved        'development',
+115 silly resolved        'end',
+115 silly resolved        'framework',
+115 silly resolved        'front',
+115 silly resolved        'front-end',
+115 silly resolved        'generate',
+115 silly resolved        'generator',
+115 silly resolved        'init',
+115 silly resolved        'initialize',
+115 silly resolved        'new',
+115 silly resolved        'project',
+115 silly resolved        'projects',
+115 silly resolved        'scaffold',
+115 silly resolved        'scaffolder',
+115 silly resolved        'scaffolding',
+115 silly resolved        'stack',
+115 silly resolved        'template',
+115 silly resolved        'templates',
+115 silly resolved        'tool',
+115 silly resolved        'web',
+115 silly resolved        'webapp',
+115 silly resolved        'yeoman',
+115 silly resolved        'yo' ],
+115 silly resolved     lintDeps: { ignore: [Object] },
+115 silly resolved     verb:
+115 silly resolved      { run: true,
+115 silly resolved        toc: [Object],
+115 silly resolved        layout: 'app',
+115 silly resolved        tasks: [Object],
+115 silly resolved        helpers: [Object],
+115 silly resolved        plugins: [Object],
+115 silly resolved        related: [Object],
+115 silly resolved        reflinks: [Object],
+115 silly resolved        lint: [Object] },
+115 silly resolved     readme: '<p align="center">\n\n<a href="https://github.com/generate/generate">\n<img height="250" width="250" src="https://raw.githubusercontent.com/generate/generate/master/docs/logo.png">\n</a>\n</p>\n\nCommand line tool and developer framework for scaffolding out new GitHub projects. Generate offers the robustness and configurability of Yeoman, the expressiveness and simplicity of Slush, and more powerful flow control and composability than either.\n\n# generate\n\n[![NPM version](https://img.shields.io/npm/v/generate.svg?style=flat)](https://www.npmjs.com/package/generate) [![NPM downloads](https://img.shields.io/npm/dm/generate.svg?style=flat)](https://npmjs.org/package/generate) [![Build Status](https://img.shields.io/travis/generate/generate.svg?style=flat)](https://travis-ci.org/generate/generate)\n\nYou might also be interested in [update](https://github.com/update/update).\n\n![generate demo](https://raw.githubusercontent.com/generate/generate/master/docs/demo.gif)\n\n**Get in touch!**\n\nHave questions, suggestions, or want to discuss generate? Join the conversation on [gitter](http://gitter.im/generate/generate) or give us a shout on [twitter](https://twitter.com/generatejs). The generate team and community are always happy to help!\n\n## tldr\n\nInterested in seeing how generate works first-hand before reading another line? See the [quickstart instructions](docs/quickstart.md).\n\n## Table of contents\n\n- [What is "Generate"?](#what-is-generate)\n  * [Why Generate?](#why-generate)\n  * [Features](#features)\n  * [Developer toolkit](#developer-toolkit)\n- [Command line usage](#command-line-usage)\n  * [Getting started](#getting-started)\n  * [init](#init)\n  * [Macros](#macros)\n  * [Command line options](#command-line-options)\n- [Generators](#generators)\n  * [Discovering generators](#discovering-generators)\n  * [Discovering plugins](#discovering-plugins)\n  * [Authoring generators](#authoring-generators)\n- [More information](#more-information)\n- [About](#about)\n  * [Related projects](#related-projects)\n  * [Release history](#release-history)\n  * [Community](#community)\n  * [Contributing](#contributing)\n  * [Running tests](#running-tests)\n  * [Author](#author)\n  * [License](#license)\n\n_(TOC generated by [verb](https://github.com/verbose/verb) using [markdown-toc](https://github.com/jonschlinkert/markdown-toc))_\n\n## What is "Generate"?\n\nGenerate is a developer tool for rapidly generating files, code snippets, and even complete projects by using templates, answers to prompts, stored preferences, user environment and so on.\n\n**Generators**\n\nAll of the actual "generating" is accomplished using plugins called [generators](docs/generators.md), which can be run by command line or using Generate\'s API.\n\nThe project you are currently visiting is Generate\'s core codebase, which provides the command line tool and API for creating, resolving, registering, and running "generators".\n\nVisit the [docs](docs) to learn more about [Generate](docs/generate.md) or [generators](docs/generators.md).\n\n### Why Generate?\n\nThere are other project scaffolders out there, why should you spend your time learning to use Generate?\n\nIn a nutshell, Generate offers the robustness, power and configurability of Yeoman, with the expressiveness and simplicity of Slush. See the following links if you\'re interested in a more detailed comparison:\n\n* [Comparison to Yeoman and Slush](docs/why-use-generate.md)\n* [Generator framework comparison](docs/generator-framework-comparison.md)\n\n### Features\n\n* **exceptional flow control**: through the use of [generators](docs/generators.md) and [tasks](docs/tasks.md)\n* **render templates**: use templates to create new files, or replace existing files\n* **prompts**: It\'s easy to create custom prompts, and aswers to prompts can be used as context for rendering templates, for settings options, determining file names, directory structure, and anything else that requires user feedback.\n* **macros**: create a completely custom generator from the command line using [macros](#macros).\n* **any engine**: use any template engine to render templates, including [handlebars](http://www.handlebarsjs.com/), [lodash](https://lodash.com/), [swig](https://github.com/paularmstrong/swig) and [pug](http://jade-lang.com), and anything supported by [consolidate](https://github.com/visionmedia/consolidate.js).\n* **data**: gather data from the user\'s environment for rendering templates, to populate "hints" in user prompts or for rendering templates, etc.\n* **fs**: in the spirit of [gulp](http://gulpjs.com), use `.src` and `.dest` to read and write globs of files.\n* **vinyl**: files and templates are [vinyl](https://github.com/gulpjs/vinyl) files\n* **streams**: full support for [gulp](http://gulpjs.com) and [assemble](https://github.com/assemble/assemble) plugins\n* **smart plugins**: Update is built on [base](https://github.com/node-base/base), so any "smart" plugin from the Base ecosystem can be used\n* **stores**: persist configuration settings, global defaults, project-specific defaults, answers to prompts, and so on.\n* much more!\n\n### Developer toolkit\n\nGenerate can be used as a standalone library, but it can also be used alongside the following libraries as part of a build workflow:\n\n* [generate](https://github.com/generate/generate): create projects (<= you are here)\n* [assemble](https://github.com/assemble/assemble): build projects\n* [verb](https://github.com/verbose/verb): document projects\n* [update](https://github.com/update/update): maintain projects\n\nAdditionally, all of these applications are built on top of [base](https://github.com/node-base/base) and [templates](https://github.com/jonschlinkert/templates).\n\n## Command line usage\n\n### Getting started\n\nThe following instructions are intended to provide a basic demonstration of how Generate works. Visit the links after this section for more information.\n\n**1. Install generate**\n\nTo use Generate\'s CLI, it must first be installed globally using [npm](https://www.npmjs.com/). You can do that now with the following command.\n\n```sh\n$ npm install --global generate\n```\n\nThis adds the `gen` command to your system path, allowing it to be run from anywhere.\n\n**2. Install a "generator"**\n\nTo see how generators work, install `generate-example`:\n\n```sh\n$ npm install --global generate-example\n```\n\n**3. Run**\n\nRun the example generator with the following command:\n\n```sh\n$ gen example\n```\n\nThis appends the string `foo` to the contents of `example.txt`. Visit the [generate-example](https://github.com/generate/generate-example) project for additional steps and guidance.\n\n**Next steps**\n\n* Browse the [documentation](docs)\n* Learn about [generators](docs/generators.md)\n* Learn about the [built-in generators](docs/cli/built-in-generators.md)\n* Learn about [authoring generators](docs/generators.md#creating-generators)\n* Learn about [setting options](docs/options.md#template-specific-options) in templates\n\n### init\n\nTell Generate\'s CLI to automatically run certain generators every time the `gen` command is given:\n\n```sh\n$ gen init\n```\n\nYou can run this command whenever you want to generate your preferences, like after installing new generators.\n\n### Macros\n\nWith macros you can create a completely custom generator, _or generator experience_, from the command line.\n\n**Example**\n\nThe following will create macro `foo` with the arguments `project:minimal travis editorconfig`:\n\n```sh\n$ gen --macro foo project:minimal travis editorconfig\n```\n\nNow, you can simly run `$ gen foo` instead of `$ gen project:minimal travis editorconfig`.\n\n**How do macros work?**\n\nWhen the `--macro` flag is used, the `process.argv` array that was passed with the macro (excluding the `--macro` flag itself and the macro name) is persisted to a [macro-store](https://github.com/doowb/macro-store). The next time macro name is used as a command line argument, the stored argv array is returned instead.\n\nSee [macro-store](https://github.com/doowb/macro-store) for more details.\n\n### Command line options\n\nNote that all command line options are preceded by `--`, or `-` for abbreviations. Only generator names or tasks can be used as commands (without `--` or `-`).\n\n* `--dest`, `-d`: Set the destination directory to use for generated files.\n* `--no-install`: Don\'t automatically install `dependencies` or `devDependencies` after generating files.\n* `--no-hints`: Don\'t use hints in prompts\n\nSee [options documentation](docs/options.md).\n\n## Generators\n\n### Discovering generators\n\n* Find generators to install by [searching npm](https://www.npmjs.com/browse/keyword/generategenerator) for packages with the keyword `generategenerator`\n* Visit [Generate\'s GitHub org](https://github.com/generate) to see the generators maintained by the core team\n\n### Discovering plugins\n\nPlugins from any applications built on [base](https://github.com/node-base/base) should work with Generate (and can be used in your generator):\n\n* [base](https://www.npmjs.com/browse/keyword/baseplugin): find base plugins on npm using the `baseplugin` keyword\n* [assemble](https://www.npmjs.com/browse/keyword/assembleplugin): find assemble plugins on npm using the `assembleplugin` keyword\n* [generate](https://www.npmjs.com/browse/keyword/generateplugin): find generate plugins on npm using the `generateplugin` keyword\n* [templates](https://www.npmjs.com/browse/keyword/templatesplugin): find templates plugins on npm using the `templatesplugin` keyword\n* [update][update-plugin]: find update plugins on npm using the `updateplugin` keyword\n* [verb](https://www.npmjs.com/browse/keyword/verbplugin): find verb plugins on npm using the `verbplugin` keyword\n\n### Authoring generators\n\nVisit the [generator documentation](docs/generators.md) guide to learn how to use, author and publish generators.\n\n## More information\n\n* [FAQ](docs/faq.md)\n* [Documentation](docs)\n* [API documentation](docs/api)\n* [Generaters maintained by the core team](https://github.com/generate)\n\n## About\n\n### Related projects\n\n* [assemble](https://www.npmjs.com/package/assemble): Get the rocks out of your socks! Assemble makes you fast at creating web projects… [more](https://github.com/assemble/assemble) | [homepage](https://github.com/assemble/assemble "Get the rocks out of your socks! Assemble makes you fast at creating web projects. Assemble is used by thousands of projects for rapid prototyping, creating themes, scaffolds, boilerplates, e-books, UI components, API documentation, blogs, building websit")\n* [base](https://www.npmjs.com/package/base): base is the foundation for creating modular, unit testable and highly pluggable node.js applications, starting… [more](https://github.com/node-base/base) | [homepage](https://github.com/node-base/base "base is the foundation for creating modular, unit testable and highly pluggable node.js applications, starting with a handful of common methods, like `set`, `get`, `del` and `use`.")\n* [update](https://www.npmjs.com/package/update): Be scalable! Update is a new, open source developer framework and CLI for automating updates… [more](https://github.com/update/update) | [homepage](https://github.com/update/update "Be scalable! Update is a new, open source developer framework and CLI for automating updates of any kind in code projects.")\n* [verb](https://www.npmjs.com/package/verb): Documentation generator for GitHub projects. Verb is extremely powerful, easy to use, and is used… [more](https://github.com/verbose/verb) | [homepage](https://github.com/verbose/verb "Documentation generator for GitHub projects. Verb is extremely powerful, easy to use, and is used on hundreds of projects of all sizes to generate everything from API docs to readmes.")\n\n### Release history\n\n#### key\n\nChangelog entries are classified using the following labels _(from [keep-a-changelog](https://github.com/olivierlacan/keep-a-changelog)_):\n\n* `added`: for new features\n* `changed`: for changes in existing functionality\n* `deprecated`: for once-stable features removed in upcoming releases\n* `removed`: for deprecated features removed in this release\n* `fixed`: for any bug fixes\n* `bumped`: updated dependencies, only minor or higher will be listed.\n\n#### [0.13.0](https://github.com/generate/generate/compare/0.12.1...0.13.0) - 2016-10-01\n\n**Fixed**\n\n* improve answer handling in `ask` listener\n* update dependencies\n\n#### [0.12.1](https://github.com/generate/generate/compare/0.12.0...0.12.1) - 2016-09-18\n\n**Fixed**\n\n* Ensure `cwd` is set and `dest` is set on `app.cache.data`\n* Ensure the reverse of a negative flag is set on options\n\n#### [0.12.0](https://github.com/generate/generate/compare/0.11.0...0.12.0) - 2016-09-12\n\n**Added**\n\n* Adds [update-notifier](https://github.com/yeoman/update-notifier)\n\n#### [0.11.0](https://github.com/generate/generate/compare/0.10.0...0.11.0) - 2016-08-17\n\n**Fixed**\n\n* CLI: macro handling was improved\n\n**Removed**\n\n* Unused `app.paths` property\n\n**Bumped**\n\n* [ask-when](https://github.com/jonschlinkert/ask-when)\n* [base-questions](https://github.com/node-base/base-questions)\n* [generate-defaults](https://github.com/generate/generate-defaults)\n* [macro-store](https://github.com/doowb/macro-store)\n\n#### [0.10.0](https://github.com/generate/generate/compare/0.9.0...0.10.0) - 2016-08-09\n\n**Changed**\n\n* More improvements to user-defined template handling.\n* Documentation\n\n#### [0.9.0](https://github.com/generate/generate/compare/0.8.0...0.9.0) - 2016-07-12\n\n**Changed**\n\n* User-defined templates should now be stored in `~/generate/templates` instead of `~/templates`\n\n**Added**\n\n* [common-config](https://github.com/jonschlinkert/common-config) will be used for storing user preferences. We haven\'t implemented any logic around this yet, but the `common-config` API is exposed on the `app.common` property, so you can begin using it in generators.\n\n### Community\n\nAre you using [Generate](https://github.com/generate/generate) in your project? Have you published a [generator](https://github.com/generate/generate/blob/master/docs/generators.md) and want to share your project with the world?\n\nHere are some suggestions!\n\n* If you get like Generate and want to tweet about it, please feel free to mention `@generatejs` or use the `#generatejs` hashtag\n* Show your love by starring [Generate](https://github.com/generate/generate) and `generate`\n* Get implementation help on [StackOverflow](http://stackoverflow.com/questions/tagged/generate) (please use the `generatejs` tag in questions)\n* **Gitter** Discuss Generate with us on [Gitter](https://gitter.im/generate/generate)\n* If you publish an generator, thank you! To make your project as discoverable as possible, please add the keyword `generategenerator` to package.json.\n\n### Contributing\n\nPull requests and stars are always welcome. For bugs and feature requests, [please create an issue](../../issues/new).\n\nPlease read the [contributing guide](.github/contributing.md) for avice on opening issues, pull requests, and coding standards.\n\n### Running tests\n\nInstall dev dependencies:\n\n```sh\n$ npm install -d && npm test\n```\n\n### Author\n\n**Jon Schlinkert**\n\n* [github/jonschlinkert](https://github.com/jonschlinkert)\n* [twitter/jonschlinkert](http://twitter.com/jonschlinkert)\n\n### License\n\nCopyright © 2016, [Jon Schlinkert](https://github.com/jonschlinkert).\nReleased under the [MIT license](https://github.com/generate/generate/blob/master/LICENSE).\n\n***\n\n_This file was generated by [verb-generate-readme](https://github.com/verbose/verb-generate-readme), v0.1.31, on October 01, 2016._',
+115 silly resolved     readmeFilename: 'README.md',
+115 silly resolved     _id: 'generate@0.13.1',
+115 silly resolved     dist: { shasum: '4efdabe482f1600149b10d380889c054c2a9816b' },
+115 silly resolved     _from: 'generate@',
+115 silly resolved     _resolved: 'https://registry.npmjs.org/generate/-/generate-0.13.1.tgz' } ]
+116 info install generate@0.13.1 into /usr/local/lib
+117 info installOne generate@0.13.1
+118 warn engine generate@0.13.1: wanted: {"node":">=5.0"} (current: {"node":"v0.10.25","npm":"1.3.10"})
+119 info /usr/local/lib/node_modules/generate unbuild
+120 verbose tar unpack /home/vagrant/.npm/generate/0.13.1/package.tgz
+121 silly lockFile 30ca6a61--local-lib-node-modules-generate tar:///usr/local/lib/node_modules/generate
+122 verbose lock tar:///usr/local/lib/node_modules/generate /home/vagrant/.npm/30ca6a61--local-lib-node-modules-generate.lock
+123 silly lockFile 7a9d88b7--npm-generate-0-13-1-package-tgz tar:///home/vagrant/.npm/generate/0.13.1/package.tgz
+124 verbose lock tar:///home/vagrant/.npm/generate/0.13.1/package.tgz /home/vagrant/.npm/7a9d88b7--npm-generate-0-13-1-package-tgz.lock
+125 silly gunzTarPerm modes [ '755', '644' ]
+126 error Error: EACCES, mkdir '/usr/local/lib/node_modules'
+126 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules']
+126 error   errno: 3,
+126 error   code: 'EACCES',
+126 error   path: '/usr/local/lib/node_modules',
+126 error   fstream_type: 'Directory',
+126 error   fstream_path: '/usr/local/lib/node_modules/generate',
+126 error   fstream_class: 'DirWriter',
+126 error   fstream_stack:
+126 error    [ '/usr/lib/nodejs/fstream/lib/writer.js:171:23',
+126 error      '/usr/lib/nodejs/mkdirp/index.js:37:53',
+126 error      'Object.oncomplete (fs.js:107:15)' ] }
+127 error Please try running this command again as root/Administrator.
+128 error System Linux 3.13.0-116-generic
+129 error command "/usr/bin/nodejs" "/usr/bin/npm" "install" "--global" "generate"
+130 error cwd /vagrant/simple_shell
+131 error node -v v0.10.25
+132 error npm -v 1.3.10
+133 error path /usr/local/lib/node_modules
+134 error fstream_path /usr/local/lib/node_modules/generate
+135 error fstream_type Directory
+136 error fstream_class DirWriter
+137 error code EACCES
+138 error errno 3
+139 error stack Error: EACCES, mkdir '/usr/local/lib/node_modules'
+140 error fstream_stack /usr/lib/nodejs/fstream/lib/writer.js:171:23
+140 error fstream_stack /usr/lib/nodejs/mkdirp/index.js:37:53
+140 error fstream_stack Object.oncomplete (fs.js:107:15)
+141 verbose exit [ 3, true ]
